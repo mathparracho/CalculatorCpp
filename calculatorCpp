@@ -1,0 +1,75 @@
+#include <bits/stdc++.h>
+#include <string>
+using namespace std;
+
+int main()
+{
+    int a, b;
+    int option = 1;
+
+    while (option != 0)
+    {
+        cout << "Escolha a opcao desejada" << endl;
+        cout << "0 - Sair \n 1 - Soma \n 2 - Subtracao \n 3 - Multiplicacao \n 4 - Divisao \n 5 - Potencia \n 6 - Fatorial \n 7 - Raiz Quadrada \n";
+        cin >> option;
+
+        if (option == 1 || option == 2 || option == 3 || option == 4 || option == 5)
+        {
+            cout << "Digite o primeiro valor: ";
+            cin >> a;
+            cout << "Digite o segundo valor: ";
+            cin >> b;
+        }
+        if (option == 6 || option == 7)
+        {
+            cout << "Digite o valor desejado: ";
+            cin >> a;
+        }
+
+        switch (option)
+        {
+            case 1:
+                cout << "Resultado: " << a + b << endl;
+                break;
+
+            case 2:
+                cout << "Resultado: " << a - b << endl;
+                break;
+            
+            case 3:
+                cout << "Resultado: " <<a * b << endl;
+                break;
+            
+            case 4:
+                if (b == 0) cout << "Impossivel dividir por 0" << endl;
+                else cout << "Resultado: " << a / b << endl;
+                break;
+            
+            case 5:
+                for (int i; i < b; i++)
+                {
+                    a *= a;
+                }
+                cout << "Resultado: " << a << endl;
+                break;
+            
+            case 6:
+                for (int i = a-1; i > 0; i--)
+                {
+                    a *= i;
+                }
+                cout << "Resultado: " << a << endl;
+                break;
+            
+            case 7:
+                cout << "Resultado: " << sqrt(a) << endl;
+                break;
+        }
+
+
+    }
+
+    return 0;
+
+
+}
